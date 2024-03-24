@@ -2,7 +2,6 @@ from aiogram import types, Router, F
 from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart, Command, or_f
 from aiogram.types import ReplyKeyboardRemove
-from aiogram.utils.formatting import as_list, Bold, as_numbered_list, Underline
 from filters.type_of_chat import ChatTypeFilter
 from keyboards.for_navigate import keyboard
 
@@ -34,14 +33,3 @@ async def inst_link_cmd(message: types.Message):
     )
 
 
-@private_router.message(or_f(Command('tasks'), F.text.lower() == 'tasks'))
-async def tasks_cmd(message: types.Message):
-    text = as_list(
-        Bold('Your tasks:\n'),
-        as_numbered_list(
-            Underline('Task1'),
-            Underline('Task2'),
-            Underline('Task3'),
-        )
-    )
-    await message.answer(text.as_html(), parse_mode=ParseMode.HTML)

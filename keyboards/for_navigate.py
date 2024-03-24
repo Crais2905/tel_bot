@@ -1,15 +1,14 @@
 from aiogram import types
 
 keyboard = types.ReplyKeyboardMarkup(
-    keyboard= [
+    keyboard=[
         [
             types.KeyboardButton(text='help'),
             types.KeyboardButton(text='about'),
             types.KeyboardButton(text='inst')
         ],
         [
-            types.KeyboardButton(text='tasks'),
-            types.KeyboardButton(text='news')
+            types.KeyboardButton(text='tasks')
         ]
     ],
     resize_keyboard=True
@@ -19,10 +18,20 @@ keyboard = types.ReplyKeyboardMarkup(
 news_keyboard = types.ReplyKeyboardMarkup(
     keyboard=[
         [
-            types.KeyboardButton(text='view last 5 news')
+            types.KeyboardButton(text='view all tasks')
         ],
         [
             types.KeyboardButton(text='add new task')
+        ]
+    ],
+    resize_keyboard=True
+)
+
+
+cancel_keyboard = types.ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            types.KeyboardButton(text='cancel')
         ]
     ],
     resize_keyboard=True

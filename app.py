@@ -1,7 +1,7 @@
 import asyncio
 from aiogram import Bot, Dispatcher
 from decouple import config
-from handlers import private, group, private_news
+from handlers import private, group, private_tasks
 from optional import options
 
 
@@ -11,7 +11,7 @@ async def main():
     dp.include_routers(
         private.private_router,
         group.group_router,
-        private_news.news_router
+        private_tasks.tasks_router
     )
 
     await bot.delete_webhook(drop_pending_updates=True)
