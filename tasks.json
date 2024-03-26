@@ -1,14 +1,26 @@
 [
     {
-        "name": "OOP",
-        "number": "1",
-        "content": "methods",
-        "deadline": "24.09.2025"
+        "name": "lists",
+        "number": "2",
+        "content": "Pop",
+        "deadline": "22.03.2025"
+    },
+    {
+        "name": "Sets",
+        "number": "2",
+        "content": "Union",
+        "deadline": "22.07.2025"
     },
     {
         "name": "OOP",
-        "number": "2",
-        "content": "class",
-        "deadline": "24.03.2025"
+        "number": "1",
+        "content": "class Electric",
+        "deadline": "22.01.2024"
+    },
+    {
+        "name": "function",
+        "number": "1",
+        "content": "lambda",
+        "deadline": "24.07.2024"
     }
 ]
